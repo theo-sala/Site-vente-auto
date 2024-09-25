@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Menu*/
+.menu {
+    font-size: 1.2em;
+    margin: auto;
+    text-align: center;
+    padding: 3%;
+    background-color: black;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    display: flex; /* Utilisation de flexbox */
+    align-items: center; /* Aligner les éléments verticalement */
+    justify-content: space-between;
+
+    border-bottom: 4px rgb(226, 0, 0) solid;
+    border-radius: 0 0 0 50em;
+}
+
+.navigation {
+    text-align: center;
+    list-style: none;
+    text-align: left;
+    width: 80%;
+}
+
+.navigation > li {
+    display: inline;
+    list-style: none;
+}
+
+.navigation > li > a {
+    display:inline-block;
+    margin: 0 3vw;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.logo_nav {
+    width: 5em; 
+    margin-right: 80px;
+    border-radius: 50% 50% 50% 50%;
+}
+
+/*Menu Hover*/
+
+.navigation > li > a:hover {
+    color: red;
+    transform: translateY(-7px);
+    transition: 0.5s;
+}
+
+.navigation > li > a:active {
+    transform: translateY(-1px);
+}
+
+/*page active*/
+
+.menu > .navigation > .acceuil_select > a {
+    color: rgb(226, 0, 0);
+}
+
+.menu > .navigation > .equipe_select > a{
+    color: rgb(226, 0, 0);
+}
+
+.menu > .navigation > .contact_select > a{
+    color: rgb(226, 0, 0);
+}
+
+/*page active END*/
+/*Menu END*/
+
+/* Menu déroulant */
+.nos_vehicules {
+    position: relative;
+}
+
+.nos_vehicules .sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position en dessous de l'élément parent */
+    left: 50%; /* Aligner le côté gauche du sous-menu avec le centre de l'élément parent */
+    transform: translateX(-50%); /* Déplacer de moitié de la largeur du sous-menu vers la gauche */
+    width: 200px; /* Ajustez la largeur selon vos besoins */
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+}
+
+.nos_vehicules:hover .sous-menu {
+    display: block;
+    border: 1px red solid;
+}
+
+.sous-menu {
+    margin-top: 2px;
+    text-align: center;
+}
+
+.nos_vehicules .sous-menu li {
+    display: block;
+}
+
+.nos_vehicules .sous-menu li a {
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.nos_vehicules .sous-menu li a:hover {
+    background-color: rgb(226, 0, 0);
+    transition: 0.2s;
+}
+/*Menu déroulant END*/
+
+
+/*video intro*/
+
+.div_video {
+    margin: auto;
+    text-align: center;
+}
+
+.video_intro {
+    margin: auto;
+    width: 70%;
+    display: flex;
+    border-left: 20px black solid;
+    border-right: 20px black solid;
+}
+
+/*video intro END*/
+
+.first_title {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+    font-style: oblique;
+    text-decoration: underline;
+    font-family: American Typewriter, serif;
+    font-size: 80px;
+    z-index: 1;
+}
+
+/*title animation*/
+
+.first_title {
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: -150%;
+      }
+    
+      to {
+        margin-top: 0%;
+      }
+    }
+
+/*title animation END*/
+
+/*Presentation fisrt page*/
+
+.presentation_div {
+    margin: auto;
+    margin-top: 10em;
+} 
+
+.presentation_div > p {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    margin: 0;
+    font-style: oblique;
+    font-family: American Typewriter, serif;
+    font-size: 80px;
+    z-index: 1;
+    font-size: 1.8em;
+    width: 50%;
+}
+
+.image_description {
+    width: 1366px;
+    height: 768px;
+    filter: brightness(50%);
+}
+
+@media all and (max-width: 1920px) and (max-height: 1080px) {
+    .image_description
+    {
+        width: 1920px;
+        height: 1080px; 
+    }
+}
+
+/*Presentation fisrt page* END/
+
+/*liens supp*/
+
+.liens_supplementaire {
+    margin-top: 5em;
+    text-align: center;
+    display: flex; /* Utilisation de flexbox */
+    flex-direction: row;
+    align-content: space-between;
+    align-items: baseline;
+}
+
+.img_link {
+    width: 90%;
+    filter: brightness(110%);
+}
+
+.img_link:hover {
+    filter: brightness(50%);
+    transition: 0.2s;
+}
+
+.liens_supplementaire {
+    position: relative;
+}
+
+.liens_supplementaire > .h2_lien1 {
+    position: absolute;
+    top: 45%; /* Centrer verticalement */
+    left: 16%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuster pour centrer parfaitement */
+    color: white;
+    font-style: oblique;
+    font-family: American Typewriter, serif;
+    font-size: 1.8em;
+    z-index: 1;
+    width: auto; /* Pour s'adapter à la largeur de la div parent */
+    text-align: center; /* Centrer le texte horizontalement */
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.liens_supplementaire > .h2_lien2 {
+    position: absolute;
+    top: 45%; /* Centrer verticalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuster pour centrer parfaitement */
+    color: white;
+    font-style: oblique;
+    font-family: American Typewriter, serif;
+    font-size: 1.8em;
+    z-index: 1;
+    width: auto; /* Pour s'adapter à la largeur de la div parent */
+    text-align: center; /* Centrer le texte horizontalement */
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.liens_supplementaire > .h2_lien3 {
+    position: absolute;
+    top: 45%; /* Centrer verticalement */
+    left: 84%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuster pour centrer parfaitement */
+    color: white;
+    font-style: oblique;
+    font-family: American Typewriter, serif;
+    font-size: 1.8em;
+    z-index: 1;
+    width: auto; /* Pour s'adapter à la largeur de la div parent */
+    text-align: center; /* Centrer le texte horizontalement */
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Pour chaque image */
+.liens_supplementaire .img_link {
+    height: auto;
+}
+
+/*liens supp END*/    
+
+/*PAGE CONTACT*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-family: inherit;
+    gap: 10px;
+    padding-inline: 2em;
+    padding-bottom: 0.4em;
+    background-color: #171717;
+    background-color: #0a192f;
+    border-radius: 20px;
+  }
+  
+  .form-heading {
+    text-align: center;
+    margin: 2em;
+    color: rgb(226, 0, 0);
+    font-size: 1.2em;
+    background-color: transparent;
+    align-self: center;
+  }
+  
+  .form-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 10px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  }
+  
+  .input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #ccd6f6;
+    padding-inline: 1em;
+  }
+  
+  .sendMessage-btn {
+    cursor: pointer;
+    margin-bottom: 3em;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: rgb(226, 0, 0);
+    font-weight: bold;
+    outline: 1px solid rgb(226, 0, 0);
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .sendMessage-btn:hover {
+    transition: all ease-in-out 0.3s;
+    background-color: rgb(212, 33, 33);
+    color: #000;
+    cursor: pointer;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  }
+
+  .form-card1 {
+    margin: auto;
+    width: 35%;
+    margin-top: 5em;
+    background-image: linear-gradient(163deg, rgb(226, 0, 0) 0%, rgb(226, 0, 0) 100%);
+    border-radius: 22px;
+    transition: all 0.3s;
+  }
+  
+  .form-card1:hover {
+    box-shadow: 0px 0px 30px 1px rgb(226, 0, 0);
+  }
+  
+  .form-card2 {
+    border-radius: 0;
+    transition: all 0.2s;
+  }
+  
+  .form-card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+  
+
+/*PAGE CONTACT END*/
+
+/*footer*/
+
+footer {
+    margin-top: 10em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+   body{
+    line-height: 1,5;
+    font-family: "Poppins", sans-serif;
+   }
+   
+.footer-col {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+
+}
+.footer{
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+
+}
+
+.footer-col ul li:not(last-child){
+   margin-bottom: 10px;
+
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display:block;
+    transition: all 0,3s ease;
+ }
+
+ .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+
+ }
+
+ .footer-col .liens-reseaux a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin-right: 10px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0,5s ease;
+ }
+
+ .footer-col .liens-reseaux a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+ }
+
+ /*responsive*/
+ @media(max-width: 767px){
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+
+    }
+ }
+
+ @media(max-width: 574px){
+    .footer-col {
+        width: 100%;
+        
+
+    }
+ }
+
+/*fotter END*/
